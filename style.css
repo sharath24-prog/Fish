@@ -72,6 +72,29 @@ img{
     max-width:var(--site-max-width) ;
 }
 
+.section-title{
+
+    text-align: center;
+    padding: 60px 0px 100px;
+    text-transform: uppercase;
+    font-size: large;
+    display: block;
+    border-radius: 40px;
+
+}
+
+.section-title::after{
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    background-color: darkblue;
+    border-radius: 50px;
+
+}
+
+
 /* Navbar style */
 header{
     background-color: #0A2540;
@@ -145,13 +168,13 @@ border-radius: 50px;
 .hero-section .hero-details .subtitle{
     font-size: larger;
     max-width: 80%;
-    margin-top: 8px;
+    margin-top: 10px;
     font-weight:900;
 }
 
 .hero-section .hero-details .description {
     max-width: 70%;
-    margin: 24px 0 40px;
+    margin: 20px 0 40px;
     font-size: medium;
 }
 
@@ -192,6 +215,158 @@ border-radius: 50px;
     margin-right: 30px;
 }
 
+/* About us Section */
+
+.about-sections{
+    padding: 120px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.about-sections .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-sections  .about-image-wrapper .about-image{
+
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 200px;
+}
+
+
+.about-sections .about-details .text{
+
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: medium;
+}
+.about-sections .about-details{
+    max-width: 50%;
+}
+
+.about-sections .about-details .section-title{
+    padding: 0;
+
+}
+
+.about-sections .social-link-list{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.about-sections .social-link-list .social-link{
+    color: #0A2540;
+    font-size: large;
+    transition: 0.2s ease;
+}
+
+/* Menu Section */
+
+.menu-section{
+    color: #fff;
+    background-color:#0A2540;
+}
+
+.menu-section .menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 110px;
+
+}
+
+.menu-section .menu-list .menu-item{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 110px);
+}
+
+
+
+.menu-section .menu-list .menu-item .menu-image{
+    max-width: 83%;
+    aspect-ratio: 1;
+}
+
+.menu-item p{
+    margin-top: 10px;
+}
+
+
+/* Testimonial website */
+
+.testinomail-section{
+    padding: 50px 0 100px;
+    background-color: rgb(249, 241, 241);
+}
+
+.testinomail-section .testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    text-align: center;
+
+}
+
+
+.testinomail-section .testimonial .user-image{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 90px;
+    margin-bottom: 50px;
+}
+
+.testinomail-section .testimonial .name{
+    margin-bottom: 16px;
+    font-size:medium;
+}
+
+
+.testinomail-section .testimonial .feedback{
+    line-height: 25px;
+
+}
+  
+
+
+
+/* Responsive media query code for max-width 1024px. */
+
+
+@media screen and (max-width:1024px) {
+
+    .menu-section .menu-list{
+        gap: 60px;
+        font-size: large;
+        font-weight: 600;
+        padding: 50px 0 100px;
+
+    }
+
+
+    .menu-section .menu-list .menu-item .text {
+        font-size: medium;
+    }
+
+
+    
+}
+
+
+
+/* Responsive media query code for max-width 900px. */
 
 @media screen and (max-width:900px) 
 
@@ -259,7 +434,7 @@ border-radius: 50px;
         padding: 30px 20px 20px;
     }
 
-    .hero-section .hero-details :is(.subtitle,.description){
+    .hero-section .hero-details :is(.subtitle,.description),.about-sections .about-details {
         max-width: 100%;
 
     }
@@ -273,5 +448,41 @@ border-radius: 50px;
         margin-right:0;
 
     }
+
+    .about-sections .section-content{
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .about-sections .about-image-wrapper .about-image{
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+
+    }
+
+
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 60px);
+    }
     
+    .menu-section .menu-list .menu-item .menu-image {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width:640px) {
+
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+
+    .menu-section .menu-list .menu-item{
+        width: 100%;
+    }
 }
