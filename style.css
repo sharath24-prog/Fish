@@ -405,7 +405,8 @@ border-radius: 50px;
 
 .copyright-text{
     
-    align-items: center;
+    
+    padding-left: 40%;
     
 }
 
@@ -560,4 +561,13 @@ border-radius: 50px;
 
 
     }
+
+    .copyright-text{
+    
+    
+    padding-left: 30%;
+    
+}
+
+
 }
